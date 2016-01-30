@@ -6,15 +6,16 @@
     background-color:white;
     min-height:70%;
     max-height: 400px;
-   display: flex;
+    display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     font-family:Cambria;
     font-size: 25px;
-    border: black 1px solid;
+    /*border: black 1px solid;*/
     max-width: 400px;
     box-shadow: #808080 5px 5px;
+    padding: 25px;
 }
 .login>p{
     padding: 10px;
@@ -78,6 +79,7 @@
 
 .footer-space {
     padding-bottom: 100px;
+    padding-top: 100px;
 }
 .writing-area {
     display: flex;
@@ -86,4 +88,57 @@
     justify-content: center;
     background-color: white;
     
+}
+.box{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 150px;
+    min-width: 150px;
+    font-family: 'Candal', sans-serif;
+    font-size: 20px;
+    margin: 15px;
+    max-width: 25%;
+   
+    border-radius: 5px;
+    color: black;
+}
+.box:hover {
+    color: white:
+}
+.glyphicon{
+    font-size: 90px;
+}
+
+.one{
+    background-color: #b4b4b4;
+}
+
+.two{
+    background-color: #ff49e2;
+}
+
+.navbar {
+    background-color: #808080;
+    font-family:Cambria;
+    color: white;
+}
+.navbar>a {
+    color: white;
+}
+.navbar textarea{
+    color:black;
+}
+.classy {
+    font-family: Cambria;
+    font-size: 16px;
+    
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
 }

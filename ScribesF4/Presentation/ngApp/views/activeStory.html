@@ -1,10 +1,14 @@
-﻿<!--<div class="row">
-    this is the navbar with the prompt displayed.
-</div>-->
+﻿<div class="nav navbar navbar-fixed-top">
+    <ul class="nav navbar-right nav-tabs">
+        <li><a href="">Write!</a></li>
+        <li><a href="">Authors</a></li>
+        <li><a href="">Stories</a></li>
+    </ul>
+</div>
 
     <div class="footer-space writing-area">
     <div class="row " ng-repeat="entry in controller.activeStory.entries">
-        <div class="col-md-12">
+        <div class="col-md-12 classy">
             {{entry.content}}
         </div>
     </div>

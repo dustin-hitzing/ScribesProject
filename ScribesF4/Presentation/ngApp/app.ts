@@ -41,6 +41,11 @@
                     templateUrl: '/Presentation/ngApp/views/register.html',
                     controller: ScribesF4.Controllers.AuthController,
                     controllerAs: 'controller'
+                })
+                .when('/profile', {
+                    templateUrl: '/Presentation/ngApp/views/profile.html',
+                    controller: ScribesF4.Controllers.ProfileController,
+                    controllerAs: 'controller'
                 });
         })
 }

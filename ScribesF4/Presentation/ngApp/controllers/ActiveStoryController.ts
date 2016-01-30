@@ -13,6 +13,7 @@
             this.$http.post(`/api/story/${this.$routeParams.storyId}`, { content: newEntry })
                 .then((response) => {
                     this.activeStory.entries.push(response.data);
+                    newEntry = [];
                 })
                 .catch((response) => {
                     

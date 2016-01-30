@@ -1,10 +1,14 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-	<meta charset="utf-8" />
-</head>
-<body>
+﻿<div class="nav navbar navbar-fixed-top">
+    <ul class="nav navbar-right nav-tabs">
+        <li><a href="">Write!</a></li>
+        <li><a href="">Authors</a></li>
+        <li class="active"><a href="">Stories</a></li>
+    </ul>
+</div>
 
-</body>
-</html>
+<div class="row" ng-repeat="story in controller.story">
+    <div class="col-md-12">
+        {{story.title}}
+        {{story.prompt}}
+    </div>
+</div>
