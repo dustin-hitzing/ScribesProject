@@ -1,0 +1,19 @@
+﻿<!--<div class="row">
+    this is the navbar with the prompt displayed.
+</div>-->
+
+    <div class="footer-space writing-area">
+    <div class="row " ng-repeat="entry in controller.activeStory.entries">
+        <div class="col-md-12">
+            {{entry.content}}
+        </div>
+    </div>
+</div>
+
+    <div class="nav navbar navbar-fixed-bottom" >
+
+        <div class="panel-body">
+            <input ng-click="controller.submitEntry(newEntry)" type="button"value="submit" />
+            <textarea class="center" ng-model="newEntry" placeholder="what will happen next..."></textarea>
+        </div>
+    </div>

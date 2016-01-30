@@ -1,0 +1,13 @@
+﻿<div>
+
+    <form class="login" ng-submit="controller.register(user)">
+        <h1 class="head">Scribes.</h1>
+        <input placeholder="Username" class="enter" ng-model="user.userName" />
+        <input placeholder="Email" class="enter" ng-model="user.email" />
+        <input type="password" placeholder="Password" class="enter" ng-model="user.password" />
+        <input type="password" placeholder="Confirm Password" class="enter" ng-model="user.confirmPassword" />
+        <p>Already have an account? <a href="#/login">Sign In.</a></p>
+        <input type="submit" class="myButton" value="Register" />
+
+    </form>
+</div>

@@ -1,0 +1,89 @@
+﻿.container-fluid{
+    background-color:#00ff99;
+}
+
+.login {
+    background-color:white;
+    min-height:70%;
+    max-height: 400px;
+   display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    font-family:Cambria;
+    font-size: 25px;
+    border: black 1px solid;
+    max-width: 400px;
+    box-shadow: #808080 5px 5px;
+}
+.login>p{
+    padding: 10px;
+    font-size: 15px;
+}
+.head {
+    color: #00ff80;
+    font-family: 'Candal', sans-serif;
+    font-size: 50px;
+    font-weight:bold;
+}
+.myButton {
+    
+    
+    color: white;
+    background-color: #b4b4b4;
+    border-style: none;
+    border-radius: 2px;
+}
+.myButton:hover {
+    background-color: black;
+    transition: 0.5s all;
+}
+.enter {
+    padding: 5px;
+    border: none;
+    border-bottom:inset 1px ;
+    margin-top: 25px;
+
+}
+
+
+.enter:focus {
+    outline: none;
+}
+
+/*This is the CSS for the ActiveStory Page*/
+.panel-body{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    
+}
+.story{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    min-height: 80%;
+    max-width: 60%;
+    background-color: white;
+}
+.center {
+    min-width:60%;
+    
+}
+.panel-body {
+    backgroud-color: #9b9b9b;
+    min-height: 80px;
+}
+
+.footer-space {
+    padding-bottom: 100px;
+}
+.writing-area {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    
+}
