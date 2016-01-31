@@ -2,31 +2,39 @@
     <ul class="nav navbar-right nav-tabs">
         <li class="active"><a href="">Write!</a></li>
         <li><a href="">Authors</a></li>
-        <li><a href="">Stories</a></li>
+        <li><a href="#/stories">Stories</a></li>
     </ul>
 </div>
+<div class="footer-space">
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+            <a href="">
+                <div class="box one">
+                    <span class="glyphicon glyphicon-pencil"> </span>
+                    <p>Keep Writing</p>
+                </div>
+            </a>
+        </div>
 
-<div class="row">
-    <div class="col-sm-12 col-md-6">
-        <a href="">
-            <div class="box one">
-                <span class="glyphicon glyphicon-pencil"> </span>
-                <p>Keep Writing</p>
-            </div>
-        </a>
-    </div>
 
-
-    <div class="col-sm-12
+        <div class="col-sm-12
          col-md-6">
-        <a href="">
-            <div class="box two">
-                <span class="glyphicon glyphicon-plus"> </span>
-                <p>New Story</p>
+            <a href="">
+                <div class="box two" ng-click="clicked=true">
+                    <span class="glyphicon glyphicon-plus"> </span>
+                    <p>New Story</p>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-12">
+            <div class="jumbotron" ng-show="clicked">
+                <input type="text" placeholder="enter a new prompt" ng-model="prompt" />
+                <input type="submit" value="create" ng-click="controller.makeStory(prompt)"/>
+                <input type="submit" value="cancel" ng-click="clicked=false" />
+                <p>{{controller.error}}</p>
             </div>
-        </a>
+        </div>
     </div>
-
 </div>
 
 

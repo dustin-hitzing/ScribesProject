@@ -6,9 +6,15 @@
     </ul>
 </div>
 
-<div class="row" ng-repeat="story in controller.story">
-    <div class="col-md-12">
-        {{story.title}}
-        {{story.prompt}}
+<div class="footer-space tiny-button">
+    <span class="glyphicon glyphicon-plus">create a new story</span>
+</div>
+
+<div class="footer-space">
+    <div class="row" ng-repeat="story in controller.story">
+        <div class="col-md-12">
+
+            <a href="#/activeStory/{{story.id}}">{{story.prompt}}</a>
+        </div>
     </div>
 </div>

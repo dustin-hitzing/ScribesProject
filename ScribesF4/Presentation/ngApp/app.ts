@@ -46,6 +46,12 @@
                     templateUrl: '/Presentation/ngApp/views/profile.html',
                     controller: ScribesF4.Controllers.ProfileController,
                     controllerAs: 'controller'
+                })
+                .when('/stories', {
+                    templateUrl: '/Presentation/ngApp/views/storyList.html',
+                    controller: ScribesF4.Controllers.StoryListController,
+                    controllerAs: 'controller'
                 });
+                
         })
 }

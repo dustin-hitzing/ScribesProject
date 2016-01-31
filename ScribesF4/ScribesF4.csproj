@@ -208,9 +208,11 @@
     <Compile Include="Domain\Invitation.cs" />
     <Compile Include="Domain\Story.cs" />
     <Compile Include="Domain\Vote.cs" />
+    <Compile Include="Infrastructure\AnotherUserRepository.cs" />
     <Compile Include="Infrastructure\ApplicationDbContext.cs" />
     <Compile Include="Infrastructure\EntryRepository.cs" />
     <Compile Include="Infrastructure\GenericRepository.cs" />
+    <Compile Include="Infrastructure\NewStoryRepository.cs" />
     <Compile Include="Infrastructure\StoryRepository.cs" />
     <Compile Include="Migrations\201601290454501_initial.cs" />
     <Compile Include="Migrations\201601290454501_initial.Designer.cs">
@@ -218,6 +220,8 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentation\Controllers\AccountController.cs" />
+    <Compile Include="Presentation\Controllers\CreateController.cs" />
+    <Compile Include="Presentation\Controllers\ListController.cs" />
     <Compile Include="Presentation\Controllers\StoryController.cs" />
     <Compile Include="Presentation\Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -232,7 +236,9 @@
     <Compile Include="Services\Models\ApplicationUserDTO.cs" />
     <Compile Include="Services\Models\EntryDTO.cs" />
     <Compile Include="Services\Models\InvitationDTO.cs" />
+    <Compile Include="Services\Models\NewStoryDTO.cs" />
     <Compile Include="Services\Models\StoryDTO.cs" />
+    <Compile Include="Services\Models\StoryListDTO.cs" />
     <Compile Include="Services\Models\VoteDTO.cs" />
     <Compile Include="Services\StoryService.cs" />
     <Compile Include="Startup.cs" />

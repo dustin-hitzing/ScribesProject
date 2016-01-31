@@ -123,6 +123,7 @@
     background-color: #808080;
     font-family:Cambria;
     color: white;
+    border: none;
 }
 .navbar>a {
     color: white;
@@ -141,4 +142,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 40px;
+}
+.tiny-button {
+    background-color: #ff49e2;
 }

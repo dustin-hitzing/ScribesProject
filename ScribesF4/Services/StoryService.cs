@@ -12,10 +12,14 @@ namespace ScribesF4.Services {
         private StoryRepository _storyRepo;
         private EntryRepository _entryRepo;
         private ApplicationUserManager _userRepo;
-        public StoryService(StoryRepository storyRepo, EntryRepository entryRepo, ApplicationUserManager userRepo) {
+        private NewStoryRepository _newStoryRepo;
+        private AnotherUserRepository _aUserRepo;
+        public StoryService(StoryRepository storyRepo, EntryRepository entryRepo, ApplicationUserManager userRepo, NewStoryRepository newStoryRepo, AnotherUserRepository aUserRepo) {
             _storyRepo = storyRepo;
             _entryRepo = entryRepo;
             _userRepo = userRepo;
+            _newStoryRepo = newStoryRepo;
+            _aUserRepo = aUserRepo;
         }
 
         public StoryDTO GetCurrentStory(int storyId, string userName) {
@@ -49,6 +53,30 @@ namespace ScribesF4.Services {
                 Content = Submission.Content
             };
         }
+
+        public IList<StoryListDTO> ListStories(string userName) {
+            return (from s in _storyRepo.FindStoriesByUser(userName)
+                    select new StoryListDTO() {
+                        Id = s.Id,
+                        Prompt = s.Prompt
+                    }).ToList();
+        }
+        public void AddNewStory(NewStoryDTO prompt, string userName) {
+            
+            var currentUser = _userRepo.FindByName(userName);
+            var newStory = new Story() {
+                Prompt = prompt.Prompt
+            };
+            //This does not work yet
+            currentUser.Stories.Add(newStory);
+            _newStoryRepo.Add(newStory);
+            _newStoryRepo.SaveChanges();
+
+
+        }
+            
+           
+        }
     }
-}
+
 
