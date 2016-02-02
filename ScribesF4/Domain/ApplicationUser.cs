@@ -16,7 +16,8 @@ namespace ScribesF4.Domain {
             // Add custom user claims here
             return userIdentity;
         }
-        public IList<Story> Stories { get; set; }
+        public IList<Friend> Friends { get; set; }
+        public IList<ApplicationUserStory> Stories { get; set; }
         public IList<Entry> Entries { get; set; }
         public IList<Invitation> Invites { get; set; }
         public IList<Vote> Votes { get; set; }

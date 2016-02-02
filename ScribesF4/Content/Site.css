@@ -1,5 +1,19 @@
 ﻿.container-fluid{
-    background-color:#00ff99;
+    
+    background-color: #00ff99
+    
+}
+.container-fluid:after{
+    content : "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(http://orig05.deviantart.net/76a3/f/2008/055/3/b/paper_texture_by_spiteful_pie_stock.jpg); 
+    width: 100%;
+    height: 100%;
+    opacity : 0.06;
+    z-index: -1;
 }
 
 .login {
@@ -12,9 +26,10 @@
     justify-content: center;
     font-family:Cambria;
     font-size: 25px;
-    /*border: black 1px solid;*/
+    
     max-width: 400px;
-    box-shadow: #808080 5px 5px;
+    box-shadow: 5px 5px 10px #808080;
+    
     padding: 25px;
 }
 .login>p{
@@ -85,52 +100,121 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    box-shadow: 5px 5px 25px #808080;
     justify-content: center;
     background-color: white;
+    margin-left: 20%;
+    margin-right: 20%;
+    max-width:80%;
+    min-height: 100%;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-family: Cambria;
+    font-size: 20px !important;
     
 }
 .box{
     display: flex;
     align-items: center;
-    flex-direction: column;
+    box-shadow: 1px 1px 5px #808080;
     justify-content: center;
-    min-height: 150px;
-    min-width: 150px;
+    min-height: 400px;
+    min-width: 250px;
     font-family: 'Candal', sans-serif;
     font-size: 20px;
     margin: 15px;
-    max-width: 25%;
-   
-    border-radius: 5px;
+    font-size: 50px !important;
+    background-color: #e3e3e3;
+    border-radius: 10px;
     color: black;
+    transition: color 0.1s ease-in-out,
+                background-color 0.1s ease-in,
+                box-shadow 0.1s ease-in;
+}
+.box>span {
+    
 }
 .box:hover {
-    color: white:
+    color: #00ff99;
+    background-color: white;
+    box-shadow: 2px 2px 6px #808080;
+    
 }
-.glyphicon{
-    font-size: 90px;
+.story-list {
+    display: flex;
+    align-items:center;
+    box-shadow: 1px 1px 5px #808080;
+    min-height:80px;
+    min-width: 250px;
+    font-family: 'Candal', sans-serif;
+    font-size: 18px;
+    margin: 15px;
+    padding-left: 10px;
+    background-color: #e3e3e3;
+    border-radius: 2px;
+    color: black;
+
+    transition: color 0.1s ease-in-out,
+                background-color 0.1s ease-in,
+                box-shadow 0.1s ease-in;
 }
 
-.one{
-    background-color: #b4b4b4;
+.story-list:hover {
+    color: #00ff99;
+    background-color: white;
+    box-shadow: 2px 2px 6px #808080;
+    
 }
 
-.two{
-    background-color: #ff49e2;
+/* this is for the NavBar*/
+.navbar-right{
+  padding-right: 15px;
+}
+.nav.navbar {
+  background-color: #a6a6a6;
+  
+}
+.nav.navbar.nav-tabs:hover {
+  background-color: none;
+}
+.navbar-brand{
+  font-size: 24px !important;
+  color: #00ff99;
+  font-family: 'Candal', sans-serif;
+}
+.navbar-brand:hover{
+  transition: 1s;
+  color: #00ff80;
+
+}
+.nav-tabs {
+  border: none;
+}
+.nav-tabs>li>a{
+  color: #f5f5f5;
+  font-size: 18px;
+  font-family: Cambria;
+}
+a {
+    text-decoration: none !important;
+}
+.nav-tabs>li>a:hover{
+  background-color: transparent;
+  font-size: 18px;
+  border:none;
+  color: white;
+}
+.nav-tabs>li>a:focus{
+  background-color: transparent;
+
 }
 
-.navbar {
-    background-color: #808080;
-    font-family:Cambria;
-    color: white;
-    border: none;
-}
-.navbar>a {
-    color: white;
-}
 .navbar textarea{
     color:black;
+    border-radius: 1px;
 }
+
+/*Don't remember what this is for*/
 .classy {
     font-family: Cambria;
     font-size: 16px;
@@ -145,4 +229,10 @@
 }
 .tiny-button {
     background-color: #ff49e2;
+}
+.butt{
+    font-family: Cambria;
+    background-color: #00ff99;
+    border-style: none;
+    border: none;
 }

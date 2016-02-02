@@ -1,39 +1,58 @@
 ﻿<div class="nav navbar navbar-fixed-top">
-    <ul class="nav navbar-right nav-tabs">
-        <li class="active"><a href="">Write!</a></li>
-        <li><a href="">Authors</a></li>
-        <li><a href="#/stories">Stories</a></li>
-    </ul>
+
+    <div class="navbar-header">
+        <a href="#/profile" class="navbar-brand">Scribes.</a>
+        <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#opened-nav" aria-expanded="false">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+
+    <div class="navbar-collapse collapse" id="opened-nav">
+        <ul class="nav navbar-right nav-tabs">
+            
+            <li><a href="#/authors">Authors</a></li>
+            <li><a href="#/stories">Stories</a></li>
+        </ul>
+    </div>
+
 </div>
 <div class="footer-space">
     <div class="row">
-        <div class="col-sm-12 col-md-6">
-            <a href="">
+        <div class="col-sm-12 col-md-offset-2 col-md-4">
+            <a href="#/stories">
                 <div class="box one">
-                    <span class="glyphicon glyphicon-pencil"> </span>
-                    <p>Keep Writing</p>
+                    <span class="glyphicon glyphicon-pencil"></span>
+                    <br />
+                    <h2>Write</h2>
                 </div>
             </a>
+
         </div>
-
-
-        <div class="col-sm-12
-         col-md-6">
+        <div class="col-md-4">
             <a href="">
-                <div class="box two" ng-click="clicked=true">
-                    <span class="glyphicon glyphicon-plus"> </span>
-                    <p>New Story</p>
+                <div class="box two" ng-click="controller.openModal()">
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <br />
+                    <h2>Create</h2>
                 </div>
             </a>
         </div>
-        <div class="col-md-12">
+        <!--
+            <div class="btn btn-success" ng-click="controller.showModal()"
+            Click Me!
+            </div>
+        -->
+
+        <!--<div class="col-md-12">
             <div class="jumbotron" ng-show="clicked">
                 <input type="text" placeholder="enter a new prompt" ng-model="prompt" />
-                <input type="submit" value="create" ng-click="controller.makeStory(prompt)"/>
+                <input type="submit" value="create" ng-click="controller.makeStory(prompt)" />
                 <input type="submit" value="cancel" ng-click="clicked=false" />
                 <p>{{controller.error}}</p>
             </div>
-        </div>
+        </div>-->
     </div>
 </div>
 

@@ -14,7 +14,7 @@ namespace ScribesF4.Infrastructure {
         public IQueryable<Story> FindStoriesByUser(string userName) {
             return from s in _db.Stories
                    from a in s.Authors
-                   where a.UserName == userName
+                   where a.Writer.UserName == userName
                    select s;
         }
     }

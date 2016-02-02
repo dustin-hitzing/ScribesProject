@@ -1,0 +1,8 @@
+﻿<div class="col-md-12">
+    <div class="jumbotron">
+        <input type="text" placeholder="enter a new prompt" ng-model="prompt" />
+        <input type="submit" value="create" ng-click="controller.makeStory(prompt)" />
+        <input type="submit" value="cancel" />
+        <p>{{controller.error}}</p>
+    </div>
+</div>

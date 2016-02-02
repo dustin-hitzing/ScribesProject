@@ -204,12 +204,14 @@
     <Compile Include="Domain\ApplicationUser.cs" />
     <Compile Include="Domain\ApplicationUserStory.cs" />
     <Compile Include="Domain\Entry.cs" />
+    <Compile Include="Domain\Friend.cs" />
     <Compile Include="Domain\IEntityInterfaces.cs" />
     <Compile Include="Domain\Invitation.cs" />
     <Compile Include="Domain\Story.cs" />
     <Compile Include="Domain\Vote.cs" />
     <Compile Include="Infrastructure\AnotherUserRepository.cs" />
     <Compile Include="Infrastructure\ApplicationDbContext.cs" />
+    <Compile Include="Infrastructure\ApplicationUserStoryRepository.cs" />
     <Compile Include="Infrastructure\EntryRepository.cs" />
     <Compile Include="Infrastructure\GenericRepository.cs" />
     <Compile Include="Infrastructure\NewStoryRepository.cs" />
@@ -218,9 +220,34 @@
     <Compile Include="Migrations\201601290454501_initial.Designer.cs">
       <DependentUpon>201601290454501_initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201601310350035_Friend Model added.cs" />
+    <Compile Include="Migrations\201601310350035_Friend Model added.Designer.cs">
+      <DependentUpon>201601310350035_Friend Model added.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201601310555539_added Interfaces.cs" />
+    <Compile Include="Migrations\201601310555539_added Interfaces.Designer.cs">
+      <DependentUpon>201601310555539_added Interfaces.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201601310601343_update test.cs" />
+    <Compile Include="Migrations\201601310601343_update test.Designer.cs">
+      <DependentUpon>201601310601343_update test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201601310604559_update test 2.cs" />
+    <Compile Include="Migrations\201601310604559_update test 2.Designer.cs">
+      <DependentUpon>201601310604559_update test 2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201601310640490_added join table.cs" />
+    <Compile Include="Migrations\201601310640490_added join table.Designer.cs">
+      <DependentUpon>201601310640490_added join table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201602022204132_test git commit.cs" />
+    <Compile Include="Migrations\201602022204132_test git commit.Designer.cs">
+      <DependentUpon>201602022204132_test git commit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Presentation\Controllers\AccountController.cs" />
     <Compile Include="Presentation\Controllers\CreateController.cs" />
+    <Compile Include="Presentation\Controllers\FriendsController.cs" />
     <Compile Include="Presentation\Controllers\ListController.cs" />
     <Compile Include="Presentation\Controllers\StoryController.cs" />
     <Compile Include="Presentation\Controllers\HomeController.cs" />
@@ -233,8 +260,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Domain\Identity\ApplicationOAuthProvider.cs" />
     <Compile Include="Presentation\Models\Identity\ChallengeResult.cs" />
+    <Compile Include="Services\FriendsService.cs" />
     <Compile Include="Services\Models\ApplicationUserDTO.cs" />
     <Compile Include="Services\Models\EntryDTO.cs" />
+    <Compile Include="Services\Models\FriendDTO.cs" />
     <Compile Include="Services\Models\InvitationDTO.cs" />
     <Compile Include="Services\Models\NewStoryDTO.cs" />
     <Compile Include="Services\Models\StoryDTO.cs" />
@@ -265,6 +294,7 @@
     <Content Include="Presentation\ngApp\views\createNewStory.html" />
     <Content Include="Presentation\ngApp\views\friendsList.html" />
     <Content Include="Presentation\ngApp\views\login.html" />
+    <Content Include="Presentation\ngApp\views\modal.html" />
     <Content Include="Presentation\ngApp\views\profile.html" />
     <Content Include="Presentation\ngApp\views\register.html" />
     <Content Include="Presentation\ngApp\views\storyList.html" />
@@ -315,6 +345,24 @@
     <EmbeddedResource Include="Migrations\201601290454501_initial.resx">
       <DependentUpon>201601290454501_initial.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601310350035_Friend Model added.resx">
+      <DependentUpon>201601310350035_Friend Model added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601310555539_added Interfaces.resx">
+      <DependentUpon>201601310555539_added Interfaces.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601310601343_update test.resx">
+      <DependentUpon>201601310601343_update test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601310604559_update test 2.resx">
+      <DependentUpon>201601310604559_update test 2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601310640490_added join table.resx">
+      <DependentUpon>201601310640490_added join table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602022204132_test git commit.resx">
+      <DependentUpon>201602022204132_test git commit.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -325,6 +373,8 @@
     <TypeScriptCompile Include="Presentation\ngApp\app.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\ActiveStoryController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\authController.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\controllers\FriendsController.ts" />
+    <TypeScriptCompile Include="Presentation\ngApp\controllers\ModalController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\ProfileController.ts" />
     <TypeScriptCompile Include="Presentation\ngApp\controllers\StoryListController.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />

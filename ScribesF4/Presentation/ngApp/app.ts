@@ -1,6 +1,6 @@
 ﻿namespace ScribesF4 {
 
-    angular.module('ScribesF4', ['ngRoute']);
+    angular.module('ScribesF4', ['ngRoute', 'ui.bootstrap']);
 
     angular.module('ScribesF4').factory('authInterceptor',
         ($q: ng.IQService, $window: ng.IWindowService, $location: ng.ILocationService) => {
@@ -31,7 +31,7 @@
                 templateUrl: '/Presentation/ngApp/views/activeStory.html',
                 controller: ScribesF4.Controllers.ActiveStoryController,
                 controllerAs: 'controller'
-            })
+                })
                 .when('/login', {
                     templateUrl: '/Presentation/ngApp/views/login.html',
                     controller: ScribesF4.Controllers.AuthController,
@@ -51,7 +51,13 @@
                     templateUrl: '/Presentation/ngApp/views/storyList.html',
                     controller: ScribesF4.Controllers.StoryListController,
                     controllerAs: 'controller'
-                });
+                })
+                .when('/authors', {
+                    templateUrl: '/Presentation/ngApp/views/friendsList.html',
+                    controller: ScribesF4.Controllers.FriendsController,
+                    controllerAs: 'controller'
+            });
+                
                 
         })
 }

@@ -14,12 +14,14 @@ namespace ScribesF4.Services {
         private ApplicationUserManager _userRepo;
         private NewStoryRepository _newStoryRepo;
         private AnotherUserRepository _aUserRepo;
-        public StoryService(StoryRepository storyRepo, EntryRepository entryRepo, ApplicationUserManager userRepo, NewStoryRepository newStoryRepo, AnotherUserRepository aUserRepo) {
+        private ApplicationUserStoryRepository _AUSRepo;
+        public StoryService(StoryRepository storyRepo, EntryRepository entryRepo, ApplicationUserManager userRepo, NewStoryRepository newStoryRepo, AnotherUserRepository aUserRepo, ApplicationUserStoryRepository AUSRepo) {
             _storyRepo = storyRepo;
             _entryRepo = entryRepo;
             _userRepo = userRepo;
             _newStoryRepo = newStoryRepo;
             _aUserRepo = aUserRepo;
+            _AUSRepo = AUSRepo;
         }
 
         public StoryDTO GetCurrentStory(int storyId, string userName) {
@@ -61,16 +63,23 @@ namespace ScribesF4.Services {
                         Prompt = s.Prompt
                     }).ToList();
         }
+
         public void AddNewStory(NewStoryDTO prompt, string userName) {
             
             var currentUser = _userRepo.FindByName(userName);
-            var newStory = new Story() {
-                Prompt = prompt.Prompt
+            var newStory = new ApplicationUserStory() {
+                ThisStory = new Story() {
+                    Prompt = prompt.Prompt    
+                },
+               Writer = currentUser
             };
+            _AUSRepo.Add(newStory);
+            _AUSRepo.SaveChanges();
+
             //This does not work yet
-            currentUser.Stories.Add(newStory);
-            _newStoryRepo.Add(newStory);
-            _newStoryRepo.SaveChanges();
+            //currentUser.Stories.Add(newStory);
+            //_newStoryRepo.Add(newStory);
+            //_newStoryRepo.SaveChanges();
 
 
         }

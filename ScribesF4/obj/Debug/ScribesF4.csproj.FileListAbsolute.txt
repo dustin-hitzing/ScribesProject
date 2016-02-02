@@ -101,3 +101,9 @@ C:\projects\ScribesF4\ScribesF4\obj\Debug\ScribesF4.dll
 C:\projects\ScribesF4\ScribesF4\obj\Debug\ScribesF4.pdb
 C:\projects\ScribesF4\ScribesF4\obj\Debug\ScribesF4.Migrations.initial.resources
 C:\projects\ScribesF4\ScribesF4\obj\Debug\ScribesF4.csproj.GenerateResource.Cache
+C:\projects\ScribesF4\ScribesF4\obj\Debug\ScribesF4.Migrations.FriendModeladded.resources
+C:\projects\ScribesF4\ScribesF4\obj\Debug\ScribesF4.Migrations.addedInterfaces.resources
+C:\projects\ScribesF4\ScribesF4\obj\Debug\ScribesF4.Migrations.updatetest.resources
+C:\projects\ScribesF4\ScribesF4\obj\Debug\ScribesF4.Migrations.updatetest2.resources
+C:\projects\ScribesF4\ScribesF4\obj\Debug\ScribesF4.Migrations.addedjointable.resources
+C:\projects\ScribesF4\ScribesF4\obj\Debug\ScribesF4.Migrations.testgitcommit.resources

@@ -1,20 +1,36 @@
 ﻿<div class="nav navbar navbar-fixed-top">
-    <ul class="nav navbar-right nav-tabs">
-        <li><a href="">Write!</a></li>
-        <li><a href="">Authors</a></li>
-        <li class="active"><a href="">Stories</a></li>
-    </ul>
+
+    <div class="navbar-header">
+        <a href="#/profile" class="navbar-brand">Scribes.</a>
+        <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#opened-nav" aria-expanded="false">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+
+    <div class="navbar-collapse collapse" id="opened-nav">
+        <ul class="nav navbar-right nav-tabs">
+           
+            <li><a href="#/authors">Authors</a></li>
+            <li><a href="#/stories">Stories</a></li>
+        </ul>
+    </div>
+
 </div>
 
-<div class="footer-space tiny-button">
-    <span class="glyphicon glyphicon-plus">create a new story</span>
-</div>
+
 
 <div class="footer-space">
     <div class="row" ng-repeat="story in controller.story">
         <div class="col-md-12">
 
-            <a href="#/activeStory/{{story.id}}">{{story.prompt}}</a>
+            <a href="#/activeStory/{{story.id}}">
+                <div class="story-list">{{story.prompt}}</div>
+                <span class="divider"></span>
+                
+            </a>
+
         </div>
     </div>
 </div>

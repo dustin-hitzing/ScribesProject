@@ -15,6 +15,8 @@ namespace ScribesF4.Infrastructure {
         public static ApplicationDbContext Create() {
             return new ApplicationDbContext();
         }
+        public IDbSet<Friend> Friends { get; set; }
+        public IDbSet<ApplicationUserStory> UserStories { get; set; }
         public IDbSet<Story> Stories { get; set; }
         public IDbSet<Entry> Entries { get; set; }
         public IDbSet<Invitation> Invites { get; set; }

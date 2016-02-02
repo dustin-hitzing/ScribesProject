@@ -1,9 +1,22 @@
 ﻿<div class="nav navbar navbar-fixed-top">
-    <ul class="nav navbar-right nav-tabs">
-        <li><a href="">Write!</a></li>
-        <li><a href="">Authors</a></li>
-        <li><a href="#/stories">Stories</a></li>
-    </ul>
+
+    <div class="navbar-header">
+        <a href="#/profile" class="navbar-brand">Scribes.</a>
+        <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#opened-nav" aria-expanded="false">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+
+    <div class="navbar-collapse collapse" id="opened-nav">
+        <ul class="nav navbar-right nav-tabs">
+            
+            <li><a href="#/authors">Authors</a></li>
+            <li><a href="#/stories">Stories</a></li>
+        </ul>
+    </div>
+
 </div>
 
     <div class="footer-space writing-area">
@@ -17,7 +30,7 @@
     <div class="nav navbar navbar-fixed-bottom" >
 
         <div class="panel-body">
-            <input ng-click="controller.submitEntry(newEntry)" type="button"value="submit" />
+            <input ng-click="controller.submitEntry(newEntry)" type="button"value="Submit" class="butt" />
             <textarea class="center" ng-model="newEntry" placeholder="what will happen next..."></textarea>
         </div>
     </div>
