@@ -32,6 +32,7 @@
 
         public logout() {
             this.$window.localStorage.removeItem('token');
+            this.$location.path('/login');
         }
     }
 
